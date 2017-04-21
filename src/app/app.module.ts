@@ -11,6 +11,7 @@ import { ViewComponent } from './view/view.component';
 import { RoutesProvider } from './app.routes';
 import { AddComponent } from './add/add.component';
 import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './service/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { LoginComponent } from './login/login.component';
     HttpModule,
     RoutesProvider
   ],
-  providers: [DropDownService],
+  providers: [DropDownService, AuthGuard],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [RootComponent]
 })
