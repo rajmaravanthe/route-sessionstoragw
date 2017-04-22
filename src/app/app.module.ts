@@ -11,7 +11,7 @@ import { ViewComponent } from './view/view.component';
 import { RoutesProvider } from './app.routes';
 import { AddComponent } from './add/add.component';
 import { LoginComponent } from './login/login.component';
-import { AuthGuard } from './service/auth-guard.service';
+import { AuthGuard } from './auth-guard';
 
 @NgModule({
   declarations: [

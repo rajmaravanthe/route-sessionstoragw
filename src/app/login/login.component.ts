@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthGuard } from '../service/auth-guard.service';
+import { AuthGuard } from '../auth-guard';
 
 @Component({
   selector: 'app-login',
@@ -17,9 +17,7 @@ export class LoginComponent implements OnInit {
       username: '',
       password: ''
     }
-    if(this._authGuard.canActivate()) {
-      this._router.navigate(['/add']);
-    }
+    
   }
   submit(values, isValid) {
     if (!isValid) {
